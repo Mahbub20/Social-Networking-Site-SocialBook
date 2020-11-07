@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title%}Update post{% endblock title%}
+
+{% block content%}
+    <div class="ui segment">
+        <h3>Updte post</h3>
+        <form action="" method="POST" enctype="multipart/form-data" class="ui form">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="ui button primary mt-5">Update</button>
+            <a href="{% url 'posts:main-post-view' %}" class="ui button black mt-5">Cancel</a>
+        </form>
+    </div>
+{% endblock content%}
